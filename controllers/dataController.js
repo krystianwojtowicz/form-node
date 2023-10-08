@@ -30,11 +30,11 @@ const validationRules = [
 
 const addData = async (req, res) => {
   try {
-    // I do not return this kind of errors because I check them on frontend
-    // const errors = validationResult(req);
-    // if (!errors.isEmpty()) {
-    //   return res.status(400).json({ errors: errors.array() });
-    // }
+    // It is the same as frontend
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
     // I think that this is strange to add checking that but if it was about users it could be useful, i want to also get error from backend thanks to that
     const dataExists = await Data.find({ customers: req.body.customers });
