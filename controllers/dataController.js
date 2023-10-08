@@ -1,6 +1,7 @@
 const Data = require("../models/data");
 const { body, validationResult } = require("express-validator");
 
+// eslint-disable-next-line no-unused-vars
 const validationRules = [
   body("customers")
     .trim()

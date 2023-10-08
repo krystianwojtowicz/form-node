@@ -5,11 +5,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
+// eslint-disable-next-line no-undef
 const mongoDB = process.env.ATLAS_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
