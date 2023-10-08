@@ -1,9 +1,14 @@
+import "./Input.scss";
+
 export const Input = (props) => {
-  const { id, name, type, placeholder, onChange, onBlur, value, error } = props;
+  const { id, name, type, placeholder, onChange, onBlur, value, error, label } =
+    props;
 
   return (
     <div className="input-container">
+      <label id="label">{label}</label>
       <input
+        className="input"
         id={id}
         name={name}
         type={type}
@@ -12,7 +17,7 @@ export const Input = (props) => {
         onBlur={onBlur}
         value={value}
       />
-      {error && <p>{error}</p>}
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };

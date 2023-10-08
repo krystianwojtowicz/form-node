@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Input } from "../atoms/Input";
+import "./Form.scss";
 
 export const Form = () => {
   const [error, setError] = useState("");
@@ -45,57 +46,69 @@ export const Form = () => {
     },
   });
   return (
-    <div>
-      <form onSubmit={formik.handleSubmit}>
-        <Input
-          id="customers"
-          name="customers"
-          type="text"
-          placeholder="customers"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.customers}
-          error={formik.touched.customers && formik.errors.customers}
-        />
-        <Input
-          id="requirements"
-          name="requirements"
-          type="text"
-          placeholder="requirements"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.requirements}
-          error={formik.touched.requirements && formik.errors.requirements}
-        />
-        <Input
-          id="typeOfCustomers"
-          name="typeOfCustomers"
-          type="text"
-          placeholder="typeOfCustomers"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.typeOfCustomers}
-          error={
-            formik.touched.typeOfCustomers && formik.errors.typeOfCustomers
-          }
-        />
-        <Input
-          id="positionsOfProspects"
-          name="positionsOfProspects"
-          type="text"
-          placeholder="positionsOfProspects"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.positionsOfProspects}
-          error={
-            formik.touched.positionsOfProspects &&
-            formik.errors.positionsOfProspects
-          }
-        />
-        {error && <p>{error}</p>}
-        {confirmation && <p>{confirmation}</p>}
-        <button type="submit">submit</button>
-      </form>
-    </div>
+    <main id="wrapper-form">
+      <div id="form">
+        <p id="paragraph">
+          what is your <br />
+          audience?
+        </p>
+        <form id="inner-form" onSubmit={formik.handleSubmit}>
+          <Input
+            label="who are your customers?"
+            id="customers"
+            name="customers"
+            type="text"
+            placeholder="customers"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.customers}
+            error={formik.touched.customers && formik.errors.customers}
+          />
+          <Input
+            label="are there any special requirements like technology, location etc.?"
+            id="requirements"
+            name="requirements"
+            type="text"
+            placeholder="requirements"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.requirements}
+            error={formik.touched.requirements && formik.errors.requirements}
+          />
+          <Input
+            label="what type of customers should be excluded?"
+            id="typeOfCustomers"
+            name="typeOfCustomers"
+            type="text"
+            placeholder="type of customers"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.typeOfCustomers}
+            error={
+              formik.touched.typeOfCustomers && formik.errors.typeOfCustomers
+            }
+          />
+          <Input
+            label="what are the positions of your prospects?"
+            id="positionsOfProspects"
+            name="positionsOfProspects"
+            type="text"
+            placeholder="positions of prospects"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.positionsOfProspects}
+            error={
+              formik.touched.positionsOfProspects &&
+              formik.errors.positionsOfProspects
+            }
+          />
+          {confirmation && <p>{confirmation}</p>}
+          <button id="button" type="submit">
+            submit
+          </button>
+          {error && <p className="error">{error}</p>}
+        </form>
+      </div>
+    </main>
   );
 };
