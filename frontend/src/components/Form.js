@@ -58,7 +58,6 @@ export const Form = () => {
             id="customers"
             name="customers"
             type="text"
-            placeholder="customers"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.customers}
@@ -69,7 +68,6 @@ export const Form = () => {
             id="requirements"
             name="requirements"
             type="text"
-            placeholder="requirements"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.requirements}
@@ -80,7 +78,6 @@ export const Form = () => {
             id="typeOfCustomers"
             name="typeOfCustomers"
             type="text"
-            placeholder="type of customers"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.typeOfCustomers}
@@ -93,7 +90,6 @@ export const Form = () => {
             id="positionsOfProspects"
             name="positionsOfProspects"
             type="text"
-            placeholder="positions of prospects"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.positionsOfProspects}

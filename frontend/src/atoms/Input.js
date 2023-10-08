@@ -1,8 +1,7 @@
 import "./Input.scss";
 
 export const Input = (props) => {
-  const { id, name, type, placeholder, onChange, onBlur, value, error, label } =
-    props;
+  const { id, name, type, onChange, onBlur, value, error, label } = props;
 
   return (
     <div className="input-container">
@@ -12,7 +11,6 @@ export const Input = (props) => {
         id={id}
         name={name}
         type={type}
-        placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
