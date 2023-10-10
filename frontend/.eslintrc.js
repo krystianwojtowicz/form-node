@@ -18,11 +18,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    jsx: "react", // Dodaj tę opcję
+    jsx: "react",
   },
   plugins: ["react"],
   rules: {
-    // ...
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
   },

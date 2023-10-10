@@ -11,9 +11,7 @@ const validationRules = [
     .withMessage("Customers must be between 8 and 50 characters"),
   body("requirements")
     .trim()
-    .notEmpty()
-    .withMessage("Requirements field is required")
-    .isLength({ min: 8, max: 50 })
+    .isLength({ max: 50 })
     .withMessage("Customers must be between 8 and 50 characters"),
   body("typeOfCustomers")
     .trim()
