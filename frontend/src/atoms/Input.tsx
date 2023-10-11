@@ -1,6 +1,18 @@
+import React, { ChangeEvent, FocusEvent } from "react";
 import "./Input.scss";
 
-export const Input = (props) => {
+interface InputProps {
+  id: string;
+  name: string;
+  type: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: FocusEvent<HTMLInputElement>) => void;
+  value: string;
+  error: string;
+  label: string;
+}
+
+export const Input: React.FC<InputProps> = (props) => {
   const { id, name, type, onChange, onBlur, value, error, label } = props;
 
   return (

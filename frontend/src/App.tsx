@@ -1,7 +1,7 @@
 import { Form } from "./components/Form";
 
-function App() {
+const App: React.FC = () => {
   return <Form />;
-}
+};
 
 export default App;
