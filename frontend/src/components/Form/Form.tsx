@@ -2,15 +2,9 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { Input } from "../atoms/Input";
+import { Input } from "../../atoms/Input/Input";
 import "./Form.scss";
-
-interface FormData {
-  customers: string;
-  requirements: string;
-  typeOfCustomers: string;
-  positionsOfProspects: string;
-}
+import { FormData } from '../../types';
 
 const initialValues: FormData = {
   customers: "",
