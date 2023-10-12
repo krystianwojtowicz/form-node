@@ -1,6 +1,7 @@
 import "./Input.scss";
 
 export const Input = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { id, name, type, onChange, onBlur, value, error, label } = props;
 
   return (

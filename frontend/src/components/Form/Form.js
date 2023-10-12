@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { Input } from "../atoms/Input";
+import { Input } from "../../atoms/Input/Input";
 import "./Form.scss";
 
 export const Form = () => {
