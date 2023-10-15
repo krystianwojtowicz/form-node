@@ -12,19 +12,19 @@ const validationRules = [
   body("requirements")
     .trim()
     .isLength({ max: 50 })
-    .withMessage("Customers must be between 8 and 50 characters"),
+    .withMessage("Requirements must be less than 50 characters"),
   body("typeOfCustomers")
     .trim()
     .notEmpty()
-    .withMessage("Requirements field is required")
+    .withMessage("Type of customers field is required")
     .isLength({ min: 8, max: 50 })
-    .withMessage("Customers must be between 8 and 50 characters"),
+    .withMessage("Type of customers must be between 8 and 50 characters"),
   body("positionsOfProspects")
     .trim()
     .notEmpty()
-    .withMessage("Requirements field is required")
+    .withMessage("Positions of prospects field is required")
     .isLength({ min: 8, max: 50 })
-    .withMessage("Customers must be between 8 and 50 characters"),
+    .withMessage("Positions of prospects must be between 8 and 50 characters"),
 ];
 
 const addData = async (req, res) => {
