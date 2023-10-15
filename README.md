@@ -3,7 +3,7 @@
 - [Installation](#Installation)
 
 # Introduction
-This is a simple MERN. It allows users to send data to database in MongoDB. The app employs various technologies, including Node.js, React. On main branch you have code with TypeScript in React, to see code without TypeScript you can see branch eslint.
+This is a simple MERN. It allows users to send data to database in MongoDB. The app employs various technologies, including Node.js, React. On the main branch, you will find the code with TypeScript in the React project. If you want to see the code without TypeScript, switch to the 'eslint' branch.
 
 # Installation
 
